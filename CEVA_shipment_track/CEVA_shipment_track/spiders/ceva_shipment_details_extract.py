@@ -6,9 +6,8 @@ import os
 import re
 import sys
 import hashlib
-from CEVA_shipment_track.items import *
 #import pdb;pdb.set_trace()
-print(sys.path)
+from CEVA_shipment_track.items import *
 import datetime
 sys.path.insert(0,os.getcwd()+'/xpath')
 import xpath

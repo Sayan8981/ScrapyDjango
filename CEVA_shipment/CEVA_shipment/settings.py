@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import sys
 
-DJANGO_PROJECT_PATH=''
+username='root'
+passwd="root@123"
+IP_addr='localhost'
+database_name='CevaShipmentDetails'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,10 +83,10 @@ WSGI_APPLICATION = 'CEVA_shipment.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CevaShipmentDetails',
-        'USER': 'root',
-        'PASSWORD': 'root@123',
-        'HOST': 'localhost',
+        'NAME': database_name,
+        'USER': username,
+        'PASSWORD': passwd,
+        'HOST': IP_addr,
         'PORT':'',
         'OPTIONS':{"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"}
     }

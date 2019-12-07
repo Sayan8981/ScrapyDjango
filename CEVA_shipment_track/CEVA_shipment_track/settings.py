@@ -11,8 +11,8 @@
 
 import os
 import sys
+import django
 
-# from ceva.models import CevaShipmentDetail
 
 PROJECT_DIR = os.path.dirname(
     os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
@@ -21,7 +21,6 @@ sys.path.append(os.path.join(PROJECT_DIR, 'CEVA_shipment'))
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'CEVA_shipment.settings'
 
-import django
 django.setup()
 
 BOT_NAME = 'CEVA_shipment_track'
