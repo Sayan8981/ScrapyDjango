@@ -20,8 +20,4 @@ class CevaShipmentDetail(models.Model):
     movement_type = models.CharField(max_length=100, blank=True, null=True)
     history_data = models.CharField(max_length=5000, blank=True, null=True)
 
-    class Meta:
-        ordering=["waybill_number"]
-        # db_table='ceva_shipment_detail'
-        def __unicode__(self):
-            return self.waybill_number
+   

@@ -12,8 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CEVA_shipment.settings')
-import django
-django.setup()
+
 from django.core.wsgi import get_wsgi_application
 
 application = get_wsgi_application()

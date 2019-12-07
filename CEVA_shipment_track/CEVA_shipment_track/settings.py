@@ -14,10 +14,15 @@ import sys
 
 # from ceva.models import CevaShipmentDetail
 
-DJANGO_PROJECT_PATH='/home/saayan-0186/ScrapyDjango/CEVA_shipment'
-DJANGO_SETTINGS_MODULE='CEVA_shipment.settings'
-sys.path.insert(0,DJANGO_PROJECT_PATH)
-os.environ["DJANGO_SETTINGS_MODULE"]=DJANGO_SETTINGS_MODULE
+PROJECT_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    )
+sys.path.append(os.path.join(PROJECT_DIR, 'CEVA_shipment'))
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'CEVA_shipment.settings'
+
+import django
+django.setup()
 
 BOT_NAME = 'CEVA_shipment_track'
 
